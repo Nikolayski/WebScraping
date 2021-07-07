@@ -6,6 +6,7 @@
     using System.Web;
     using System.Linq;
     using System.Globalization;
+    using System.Text;
 
     class StartUp
     {
@@ -68,10 +69,12 @@
 
         private static void PrintProduct(Product product)
         {
-            Console.WriteLine($"Product name: {product.ProductName}");
-            Console.WriteLine($"Price: {product.Price}");
-            Console.WriteLine($"Rating: {product.Rating}");
-            Console.WriteLine();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Product name: {product.ProductName}");
+            sb.AppendLine($"Price: {product.Price}");
+            sb.AppendLine($"Rating: {product.Rating}");
+            sb.AppendLine("\n");
+            Console.WriteLine(sb.ToString());
         }
     }
 }
