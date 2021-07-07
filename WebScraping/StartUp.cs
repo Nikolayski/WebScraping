@@ -52,7 +52,7 @@
             int maxRatingValue = 5;
             string ratingString = div.Attributes["rating"].Value;
             decimal rating = decimal.Parse(ratingString, CultureInfo.InvariantCulture);
-            if (rating < maxRatingValue) return rating;
+            if (rating <= maxRatingValue) return rating;
             rating = (rating / 10) * maxRatingValue;
             return Math.Round(rating, 1, MidpointRounding.AwayFromZero);
         }
