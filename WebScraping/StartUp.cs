@@ -2,12 +2,6 @@
 {
     using HtmlAgilityPack;
 
-    using System;
-    using System.Web;
-    using System.Linq;
-    using System.Globalization;
-    using System.Text;
-
     class StartUp
     {
         static void Main(string[] args)
